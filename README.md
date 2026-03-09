@@ -1,16 +1,28 @@
-The NYU training and testing code for the AESPN portion has been released, and plans for subsequent releases are being developed.
+# AESPN (NYU Dataset)
 
-need pytorch_lightning ( and some other pack)
+The NYU training and testing code for the AESPN portion has been officially released. Plans for subsequent releases are currently being developed.
 
-Main file is the lit_NYU_main_customLoss_dataset_prefill.py
+## 🛠️ Requirements
 
-checkpoint can be downloaded by this link:通过网盘分享的文件：epoch=82-RMSE=0.0891.ckpt
-链接: https://pan.baidu.com/s/1ilv5VDz2IaVQnGoduxg8oQ 提取码: tu41
+Ensure you have the following dependencies installed before running the code:
+* `pytorch_lightning`
+* *(Please add other necessary packages here, e.g., torch, numpy)*
 
-Modify 【dir_data】 and 【split_json】 in datasetsettings_NYU.py to prepare your NYU dataset.
+## 📥 Checkpoints
 
+The pre-trained model weights can be downloaded via Baidu Netdisk:
+* **File:** `epoch=82-RMSE=0.0891.ckpt`
+* **Link:** [Baidu Netdisk (百度网盘)](https://pan.baidu.com/s/1ilv5VDz2IaVQnGoduxg8oQ)
+* **Access Code (提取码):** `tu41`
 
-Modify the path to 【pretrain_weight】 on line 54 of settings_NYU.py and set 【pretrain_weight】 to True for testing.
+## 🚀 Usage
 
+The main execution file for this project is `lit_NYU_main_customLoss_dataset_prefill.py`.
 
-Set【pretrain_weight】 to False and run  lit_NYU_main_customLoss_dataset_prefill.py to train your model.
+### Step-by-Step Instructions
+
+| Phase | Action Required | Target File | Description |
+|---|---|---|---|
+| **1. Data Preparation** | Modify `dir_data` and `split_json` | `datasetsettings_NYU.py` | Configure these parameters to correctly locate and prepare your NYU dataset. |
+| **2. Testing** | Set `pretrain_weight = True` <br> Update checkpoint path | `settings_NYU.py` (Line 54) | Specify the path to the downloaded checkpoint to evaluate the model. |
+| **3. Training** | Set `pretrain_weight = False` | `settings_NYU.py` | Run `lit_NYU_main_customLoss_dataset_prefill.py` to start training your model from scratch. |
