@@ -5,8 +5,9 @@ The NYU training and testing code for the AESPN portion has been officially rele
 ## 🛠️ Requirements
 
 Ensure you have the following dependencies installed before running the code:
-* `pytorch_lightning`
-* *(Please add other necessary packages here, e.g., torch, numpy)*
+* `torch, pytorch_lightning`
+* `scipy,h5py,PIL,matplotlib,icecream, some others`
+
 
 ## 📥 Checkpoints
 
